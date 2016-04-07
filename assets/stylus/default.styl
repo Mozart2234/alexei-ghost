@@ -1,0 +1,138 @@
+// fonts
+// font-family 'Josefin Sans', sans-serif
+// font-family 'Kanit', sans-serif
+
+body
+  background-color bColor
+  font-family: 'Josefin Sans', sans-serif;
+p
+  color rgba(0,0,0,.7)
+a
+  color #1da1f2
+  transition 100ms all linear
+  text-decoration none
+  font-weight 500
+  &:hover
+    color #3d90f7
+
+h2, h3,h4, h5, h6
+  line-height 2rem
+  margin 2rem 0 0.8rem 0
+
+h2
+    font-size 2.3rem
+
+h3
+    font-size 1.8rem
+
+h4
+    font-size 1.6rem
+
+h5
+    font-size 1.4rem
+
+h6
+    font-size 1.2rem
+
+blockquote
+    width 100%
+    margin 1rem 0
+    padding 0 0 0 .5rem
+    border-left #1da1f2 3px solid
+    color postTextColor
+code
+    padding .1rem .3rem
+    white-space pre-wrap
+    background rgba(30,37,42,.2)
+    border-radius 3px
+    color #1e252a
+
+table
+    box-sizing border-box
+    margin 1.75em 0
+    width 100%
+    max-width 100%
+    background-color: transparent
+
+table th,
+table td
+    padding 8px
+    line-height 20px
+    text-align left
+    vertical-align top
+    border-top #EFEFEF 1px solid
+
+table th
+    color #000
+
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td
+    border-top 0
+
+
+table tbody + tbody
+    border-top: #EFEFEF 2px solid
+
+table table table
+    background-color: #FFF
+
+table tbody > tr:nth-child(odd) > td,
+table tbody > tr:nth-child(odd) > th
+    background-color #F6F6F6
+
+table.plain tbody > tr:nth-child(odd) > td,
+table.plain tbody > tr:nth-child(odd) > th
+   background: transparent
+
+
+//Videos
+.flex-video
+    height 0
+    overflow hidden
+    padding-bottom 56.25%
+    padding-top 30px
+    position relative
+
+    iframe
+    object
+    embed
+    video
+        height 100%
+        left 0
+        position absolute
+        top 0
+        width 100%
+
+@media all and (min-width 1080px)
+    h2, h3,h4, h5, h6
+        margin 2rem 0 1rem 0
+
+    h2
+        font-size 2.2rem
+
+    h3
+        font-size 2rem
+
+    h4
+        font-size 1.8rem
+
+    h5
+        font-size 1.6rem
+
+    h6
+        font-size: 1.4rem
+
+    pre
+        max-width 900px
+
+        code
+            background none
+            border none
+
+    .flex-video
+        width 900px
+        max-width 900px

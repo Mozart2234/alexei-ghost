@@ -1,0 +1,28 @@
+{{!-- loop --}}
+
+{{#foreach posts from="2"}}
+<article class="Post {{post_class}}" >
+  <div class="Post-cover {{#if image}}" style="background: url({{image}}) no-repeat 100%; background-size: cover;" {{else}}no-cover{{/if}}></div>
+  <div class="Post-mainContent">
+    <div class="Post-details">
+      <p class="Post-detailsText">
+        {{date format="DD MMM YYYY"}}
+      </p>
+      <p class="Post-detailsText">
+        <span class="Post-span"> por </span> {{author}}
+      </p>
+    </div>
+    <h3 class="Post-title">
+      <a href="{{url}}">{{title}}</a>
+    </h3>
+    <p class="Post-content">
+      {{excerpt words="100"}}<span>...</span>
+    </p>
+    <div class="Button">
+      <a href="{{url}}" class="Button-more Button-n">
+        <span>Leer Más</span>
+      </a>
+    </div>
+  </div>
+</article>
+{{/foreach}}

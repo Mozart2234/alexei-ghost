@@ -1,0 +1,36 @@
+{{!-- footer --}}
+<footer class="Layout-footer">
+  <div class="MainFooter Layout-wrapper">
+    <div class="MainFooter-top">
+      <div class="MainFooter-col2">
+        <a href="{{@blog.url}}">
+          <img src="./assets/images/logoTextAzul.png" alt="Logo Alexei" class="imgLogoFooter">
+        </a>
+        <p class="text">{{@blog.description}}</p>
+      </div>
+
+      <div class="MainFooter-col2">
+        <a href="http://www.vultr.com/?ref=6877234">
+          <img src="./assets/images/logoVultr.png" alt="Logo Vultr" class="imgLogoFooter">
+        </a>
+
+        <p class="text">Publicado en <a href="#">Ghost</a> y Alojado en <a href="http://www.vultr.com/?ref=6877234">Vultr</a> </p>
+      </div>
+
+    </div>
+    <div class="MainFooter-bottom">
+      <div class="SocialLinks SocialLinks--footer center">
+        {{> social-links}}
+      </div>
+      <nav class="MenuFooter">
+        <ul class="MenuFooter-list">
+          {{!-- navigation --}}
+          {{navigation}}
+        </ul>
+      </nav>
+      <p class="MenuFooter-copyrightText">
+        (C) {{@blog.title}} 2016
+      </p>
+    </div>
+  </div>
+</footer>

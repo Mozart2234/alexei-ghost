@@ -1,0 +1,22 @@
+{{!< default}}
+
+<div class="Layout">
+    {{!-- Fix-meny --}}
+    {{> fix-menu}}
+
+    {{!-- Header --}}
+    {{> header }}
+    <div class="Layout-main Layout-wrapper">
+      <div class="Main">
+        {{!-- loop --}}
+        {{> loop }}
+      </div>
+      {{!-- sidebar --}}
+      {{>sidebar }}
+    </div>
+    {{!-- footer --}}
+    {{> footer}}
+</div>
+{{!-- search-fix --}}
+{{> search-fix }}
+<script src="./assets/js/alexei.js"></script>

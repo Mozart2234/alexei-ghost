@@ -1,0 +1,6 @@
+{{!-- navigation --}}
+{{#foreach navigation}}
+<li class="">
+  <a href="{{url absolute="true"}}" class="{{#if current}}active{{/if}}">{{label}}</a>
+</li>
+{{/foreach}}
