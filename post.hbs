@@ -1,0 +1,37 @@
+{{!< default}}
+
+{{#post}}
+
+  {{!-- Fix-meny --}}
+  {{> fix-menu }}
+
+  {{!-- Header --}}
+  {{> header-single }}
+
+  <div class="Layout-main Layout-wrapper">
+    <div class="Entry">
+      <section class="Entry-social">
+        <div class="addthis_sharing_toolbox"></div>
+      </section>
+      <section class="Entry-content">
+        {{content}}
+      </section>
+      <section class="Entry-social">
+        <h3>Comparte con tus amigos si te gusto el articulo, apoyalos!</h3>
+        <div class="addthis_sharing_toolbox"></div>
+      </section>
+      <section class="Entry-tags">
+        {{#foreach tags}}
+           <a href="{{url}}" class="tags">{{name}}</a>
+         {{/foreach}}
+      </section>
+
+      {{!- subscribe-widget -}}
+      {{> subscribe-widget}}
+
+      {{!- comments -}}
+      {{> comments }}
+    </div>
+  </div>
+
+{{/post}}
