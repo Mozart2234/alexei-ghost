@@ -46,6 +46,40 @@ gulp.task('connect', function () {
   livereload = true;
 })
 
+//Minify JS
+gulp.task('minify-js', function(){
+  return gulp.src('./assets/js-dev/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('./assets/js/'))
+})
+
+// Minifica CSS externos
+gulp.task('minify-css', function() {
+  return gulp.src('./assets/css-dev/vendor/*.css')
+    .pipe(minifyCss())
+    .pipe(gulp.dest('./assets/css/vendor/'))
+})
+
+// Minify JS externos
+gulp.task('minify-js-vendor', function() {
+  return gulp.src('./assets/js-dev/vendor/*.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('./assets/js/vendor/'))
+})
+
+// Concat CSS
+gulp.task('css-concat', function(){
+  return gulp.src('./assets/css/vendor/*.css')
+    .pipe(concat('vendor.css'))
+    .pipe(gulp.dest('./assets/css/vendor/'))
+})
+
+// Vendor-css
+gulp.task('js-concat',function(){
+  return gulp.src('./assets/js/vendor/*.js')
+    .pipe(concat('vendor.js'))
+    .pipe(gulp.dest('./assets/js/vendor/'))
+})
 
 // Gulp Watch
 gulp.task('watch', function() {
