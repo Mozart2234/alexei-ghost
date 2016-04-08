@@ -34,7 +34,7 @@
     height 100%
   &-footer
     background white
-    box-shadow 2px 2px 3px rgba(0,0,0,0.2)
+    box-shadow 0 -1px 1px rgba(0,0,0,.4)
   &-wrapper
     max-width 1100px
     margin 0 auto
@@ -145,11 +145,14 @@
     text-transform lowercase
   &-title
     margin 0
+    font-size 2.5em
+    text-shadow: 2px 2px 0 #808080;
     a
       color white
       text-decoration none
       letter-spacing 1px
       font-size .9em
+      font-weight bolder
   &-single
     text-align center
   &-description
@@ -201,11 +204,13 @@
     &-details
       font-size 1em
     &-title
-      font-size 2.5rem
+      font-size 4.5rem
       margin .3em 0
     &-single
       font-size 5.4rem
       line-height 2.7rem
+      font-weight: bolder;
+
 
 @media (min-width: 1024px)
   .CoverFull
@@ -231,6 +236,7 @@
   margin 1em 0
   box-sizing border-box
   padding 1em
+  width 100%
   &-content
     line-height 1.8rem
     font-size 1.2rem
@@ -289,7 +295,6 @@
   &-title
     font-weight 800
     margin .5em 0
-
     a
       text-decoration none
       color postTitleColor
@@ -388,6 +393,9 @@
     font-weight 500
     font-size .9em
     font-family 'Kanit', sans-serif
+
+.WidgetText
+  margin-top 1em
 
 .SuscribeWidget
   padding 1em

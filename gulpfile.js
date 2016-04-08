@@ -8,7 +8,8 @@ var gulp = require('gulp'),
     minifyCss = require('gulp-minify-css'),
     connect = require('gulp-connect'),
     concat = require('gulp-concat'),
-    gulpif = require('gulp-if');
+    gulpif = require('gulp-if'),
+    nib = require('nib');
 
 var livereload = false;
 
@@ -16,7 +17,8 @@ var livereload = false;
 gulp.task('stylus', function () {
   gulp.src('./assets/stylus/style.styl')
     .pipe(stylus({
-      compress: true
+      compress: true,
+      use: nib()
     }))
     .pipe(gulp.dest('./assets/css/'))
     .pipe(gulpif(livereload, connect.reload()))
@@ -86,6 +88,10 @@ gulp.task('watch', function() {
   gulp.watch(['./*.html'], ['html']);
   gulp.watch('./assets/stylus/*.styl', ['stylus']);
   gulp.watch('./assets/js-dev/*.js', ['js']);
+})
+
+gulp.task('watch-stylus', function(){
+  gulp.watch('./assets/stylus/*.styl', ['stylus']);
 })
 
 // Default gulp
