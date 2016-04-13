@@ -26,7 +26,6 @@ ButtonHiddenMenu.addEventListener('click', hiddenMenu);
 // SearchFix
 
 var showSearchMenu = function(){
-  console.log('click')
   search.classList.add('showSearch','zoomIn');
 }
 
@@ -37,3 +36,9 @@ var hiddenSearchMenu = function(){
 ButtonShowSearch.addEventListener('click',showSearchMenu);
 
 ButtonHiddenSearch.addEventListener('click', hiddenSearchMenu);
+
+$("#search-field").ghostHunter({
+    results         : "#Results-GhostSearch",
+    onKeyUp         : true,
+    result_template : '<a href="{{link}}" class="SearchFix-resultLink"><span><i class="fa fa-caret-right" aria-hidden="true"></i></span> {{title}}</a>'
+});
