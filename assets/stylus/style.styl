@@ -162,6 +162,33 @@
     display none
 
 
+.PageNav
+  display flex
+  justify-content center
+  width 100%
+  &-prev
+  &-next
+    background transparent
+    display table
+    border 3px solid transparent
+    color: #613df7
+    margin 1em 0
+    font-size .85em
+    font-weight 500
+    font-family 'Kanit', sans-serif
+    text-decoration none
+    text-transform uppercase
+    letter-spacing 1px
+    transition all 300ms linear 0s
+    border-image linear-gradient(to left, #3d90f7  0%, #613df7 100%)
+    border-image-slice 1
+    padding .8em 1.2em
+    margin-left .5em
+    &:hover
+      background linear-gradient(to left, #3d90f7  0%, #613df7 100%)
+      color: white
+
+
 @media (min-width: 768px)
   .FixMenu
     display none
@@ -214,7 +241,6 @@
       font-weight: bolder;
     &-description
       display block
-
 
 @media (min-width: 1024px)
   .CoverFull
